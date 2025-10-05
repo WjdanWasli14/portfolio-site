@@ -1,0 +1,114 @@
+<!--
+قالب HTML جاهز لملف إنجاز (RTL - عربي)
+تعليمات سريعة:
+1) هذا الملف اسمه index.html — انسخي كامل المحتوى واحفظيه كـ index.html
+2) ضعي صورك داخل مجلد assets/ بنفس المسارات: assets/profile.jpg , assets/project1.jpg , assets/project2.jpg , assets/project3.jpg
+3) لاستضافة القالب بسهولة استخدمي GitHub Pages أو Netlify (انشر المجلد كامل ثم احصلي على رابط الـ URL).
+4) داخل Google Sites: Insert → Embed → By URL => الصقي رابط موقع GitHub Pages أو Netlify.
+
+ملاحظات بديلة: يمكنك أيضاً رفع الصور داخل Google Sites مباشرة (Insert → Image) ثم تعديل روابط الصور في الكود إلى روابط مباشرة إذا استضفت الملف في مكان يدعم روابط مباشرة.
+-->
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ملف إنجاز - [اسمك]</title>
+  <style>
+    :root{
+      --bg:#eaf5fb;
+      --card:#ffffff;
+      --accent:#0b5ea3;
+      --muted:#6b7a8a;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Noto Sans Arabic", "Tajawal", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:#0b2540;
+      -webkit-font-smoothing:antialiased;
+      direction:rtl;
+    }
+    /* خلفية بها رموز برمجية خفيفة باستخدام صورة SVG مضمّنة */
+    .header{
+      position:relative;
+      background-image:
+        radial-gradient(circle at 10% 10%, rgba(11,94,163,0.06) 0, transparent 30%),
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='120'><text x='0' y='20' font-size='18' fill='%230b5ea3' opacity='0.06'>&lt;/&gt; { } ; () &lt;?&gt;</text></svg>");
+      background-repeat:repeat;
+      padding:40px 20px 80px 20px;
+      text-align:center;
+    }
+    .container{max-width:980px;margin:0 auto;padding:20px;}
+    .profile{max-width:250px;margin:10px auto;border-radius:14px;overflow:hidden;box-shadow:0 6px 18px rgba(11,94,163,0.08);}
+    .profile img{width:100%;height:auto;display:block;}
+    .title{font-size:34px;margin:12px 0;color:var(--accent);font-weight:700;}
+    .subtitle{font-size:18px;color:var(--muted);margin-bottom:18px;}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:20px;}
+    .card{background:var(--card);padding:22px;border-radius:12px;box-shadow:0 6px 18px rgba(11,94,163,0.04);text-align:center;}
+    .card svg{width:46px;height:46px;margin-bottom:10px;opacity:0.95}
+    .card h3{margin:6px 0 0;font-size:18px;color:var(--accent);}
+    .cards-section{margin-top:28px;}
+    .section-title{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--accent);margin:28px 0 12px;font-size:20px;justify-content:center}
+    .achievements-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+    .thumb{border-radius:10px;overflow:hidden;box-shadow:0 6px 14px rgba(11,94,163,0.04)}
+    .thumb img{width:100%;height:140px;object-fit:cover;display:block}
+    .footer{margin:36px 0 60px;text-align:center;color:var(--muted);font-size:14px}
+    @media (max-width:520px){
+      .title{font-size:28px}
+      .profile{max-width:180px}
+    }
+  </style>
+</head>
+<body>
+  <section class="header">
+    <div class="container">
+      <div class="profile" id="profile">
+        <!-- استبدلي المسار التالي بصورة المعلمة (assets/profile.jpg) -->
+        <img src="assets/profile.jpg" alt="صورة المعلمة" id="profile-img">
+      </div>
+      <div class="title">ملف إنجاز <span id="name">[اسم المعلمة]</span></div>
+      <div class="subtitle">معلمة حاسب آلي — شغف بالتدريس والتصميم والبرمجة</div>
+
+      <div class="cards-section">
+        <div class="grid">
+          <div class="card">
+            <!-- أيقونة سيرة -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 12a4 4 0 100-8 4 4 0 000 8z" fill="#0b5ea3" opacity="0.95"/>
+              <path d="M4 20a8 8 0 0116 0" fill="#0b5ea3" opacity="0.06"/>
+            </svg>
+            <h3>السيرة الذاتية</h3>
+          </div>
+          <div class="card">
+            <!-- أيقونة إنجاز -->
+            <svg viewBox="0 0 24 24"><path d="M12 2l2.5 5 5.5.8-4 3.9.9 5.4L12 15.8 6.1 17.9l.9-5.4-4-3.9 5.5-.8L12 2z" fill="#0b5ea3" opacity="0.95"/></svg>
+            <h3>الإنجازات</h3>
+          </div>
+          <div class="card">
+            <!-- أيقونة مهارات -->
+            <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zM4 11h10v2H4zM4 16h7v2H4z" fill="#0b5ea3"/></svg>
+            <h3>المهارات</h3>
+          </div>
+          <div class="card">
+            <!-- أيقونة معرض -->
+            <svg viewBox="0 0 24 24"><path d="M3 5v14h18V5H3zm2 2h14v10H5V7z" fill="#0b5ea3"/></svg>
+            <h3>المعرض</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title">أعمال ومشاريع</div>
+      <div class="achievements-grid">
+        <div class="thumb"><img src="assets/project1.jpg" alt="مشروع 1"></div>
+        <div class="thumb"><img src="assets/project2.jpg" alt="مشروع 2"></div>
+        <div class="thumb"><img src="assets/project3.jpg" alt="مشروع 3"></div>
+      </div>
+
+      <div class="footer">للتعديل: استبدلي الصور في مجلد <code>assets/</code> أو عدّلي روابط الصور داخل الكود. إذا أردت أقدر أساعدك أرفع الملفات وأعطيك رابط جاهز للاستعمال.</div>
+    </div>
+  </section>
+</body>
+</html>
